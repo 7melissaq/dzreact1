@@ -1,0 +1,153 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 24px;
+}
+
+.footer {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #f3f8fa;
+    backdrop-filter: blur(12px);
+}
+
+.footer__inner {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #111;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logoMark {
+    color: #6d5efc;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.foot_text {
+    color: #617C8B;
+    font-size: 19px;
+}
+
+.navList {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLink {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    color: #125C85;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navLink:hover {
+    color: #247baa;
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #125C85;
+    transition: width 0.25s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.cta {
+    flex-shrink: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #6d5efc;
+    border-radius: 8px;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.cta:hover {
+    background-color: #574be0;
+}
+
+.cta:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 56px;
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .logoText {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        padding: 32px 16px 20px;
+    }
+
+    .columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
