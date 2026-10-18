@@ -1,11 +1,13 @@
 import s from './Footer.module.css'
+import logo from '../../assets/logo.svg'
+
 export function Footer() {
     return (
         <footer className={s.footer}>
             <div className="container">
                 <div className={s.footer__inner}>
                     <a href="/" className={s.logo}>
-                        <span className={s.logoMark}><img src="src/assets/logo.svg" alt="" /></span>
+                        <span className={s.logoMark}><img src={logo} alt="Логотип" /></span>
                     </a>
                     <p className={s.foot_text} aria-label="Текст подвала">Море ближе, чем кажется.</p>
 
