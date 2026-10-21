@@ -151,3 +151,9 @@
         gap: 12px;
     }
 }
+/* Подвал находится после контента, а не прилипает к верхней части окна. */
+.footer { position: static; }
+@media (max-width: 768px) {
+  .footer__inner { height: auto; min-height: 170px; flex-wrap: wrap; justify-content: center; padding: 30px 0; }
+  .navList { flex-wrap: wrap; justify-content: center; }
+}

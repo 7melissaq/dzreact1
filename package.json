@@ -14,7 +14,8 @@
   "dependencies": {
     "gh-pages": "^6.3.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router": "^8.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
