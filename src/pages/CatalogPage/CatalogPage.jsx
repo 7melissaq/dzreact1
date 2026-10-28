@@ -1,15 +1,7 @@
 
 import { Catalog } from '../../components/Catalog/Catalog';
+import { Categories } from '../../components/Categories/Categories';
 import s from './CatalogPage.module.css';
-
-const categories = [
-  'Все товары',
-  'Одежда',
-  'Обувь',
-  'Аксессуары',
-  'Сумки',
-  'Для пляжа'
-];
 
 export function CatalogPage() {
   return (
@@ -35,21 +27,10 @@ export function CatalogPage() {
           </select>
         </div>
 
-        <div className={s.catalogCategories}>
-          {categories.map((category, index) => (
-            <button
-              key={category}
-              type="button"
-              className={`${s.categoryButton} ${index === 0 ? s.categoryActive : ''
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <Categories />
       </div>
 
-      <Catalog showTitle={false} />
+      <Catalog />
     </div>
   );
 }

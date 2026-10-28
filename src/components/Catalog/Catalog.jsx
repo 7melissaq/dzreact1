@@ -1,5 +1,6 @@
 import s from './Catalog.module.css';
 import { CatalogCard } from './CatalogCard/CatalogCard';
+import { products } from '../../assets/data';
 
 export function Catalog({ showTitle = true }) {
   return (
@@ -11,9 +12,7 @@ export function Catalog({ showTitle = true }) {
           </header>
         )}
         <div className={s.grid}>
-          <CatalogCard />
-          <CatalogCard />
-          <CatalogCard />
+          {products.map(product => <CatalogCard key={product.id} product={product} />)}
         </div>
       </div>
     </section>

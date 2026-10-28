@@ -1,4 +1,3 @@
-
 import s from './Banner.module.css'
 import bannerBg from '../../assets/banner-bg.jpg'
 

@@ -1,0 +1,22 @@
+.catalogCategories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.categoryButton {
+    border: 1px solid #cbdce5;
+    border-radius: 4px;
+    background: #fff;
+    color: #183D51;
+    padding: 12px 18px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.categoryActive {
+    background: #125C85;
+    border-color: #125C85;
+    color: #fff;
+}
