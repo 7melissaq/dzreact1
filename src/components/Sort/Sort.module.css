@@ -1,0 +1,33 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 52px;
+    border: 1px solid #cbdce5;
+    border-radius: 4px;
+    background: #fff;
+    padding: 0 14px;
+}
+
+.label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.select {
+    width: 100%;
+    background: #fff;
+    color: #183D51;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .wrap {
+        width: 100%;
+    }
+}

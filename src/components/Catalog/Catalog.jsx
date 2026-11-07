@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react';
 import s from './Catalog.module.css';
 import { CatalogCard } from './CatalogCard/CatalogCard';
 
-export function Catalog() {
+export function Catalog({
+  search = '',
+  categoryId = null,
+  sort = ''
+}) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
 
@@ -25,11 +29,25 @@ export function Catalog() {
     load();
   }, []);
 
+  const filteredProducts = products
+    .filter(product =>
+      product.title.toLowerCase().trim().includes(search.toLowerCase().trim())
+    )
+    .filter(product => product.categoryId === categoryId || categoryId === null);
+
+  const sorting = (productsToSort) => {
+    if (!sort) return productsToSort;
+
+    return [...productsToSort].sort((a, b) =>
+      sort === 'asc' ? a.price - b.price : b.price - a.price
+    );
+  };
+
   if (error) {
     return <p>Не удалось загрузить товары: {error}</p>;
   }
 
-  if (products.length === 0) {
+  if (filteredProducts.length === 0) {
     return <p>Товары не найдены</p>;
   }
 
@@ -40,7 +58,7 @@ export function Catalog() {
           <h2 className={s.title}>Собери своё лето</h2>
         </header>
         <div className={s.grid}>
-          {products.map(product => (
+          {sorting(filteredProducts).map(product => (
             <CatalogCard key={product.id} product={product} />
           ))}
         </div>

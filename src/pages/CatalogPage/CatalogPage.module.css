@@ -30,32 +30,6 @@
     margin-top: 36px;
 }
 
-.catalogSearch,
-.catalogSort {
-    box-sizing: border-box;
-    height: 52px;
-    border: 1px solid #cbdce5;
-    border-radius: 4px;
-    background: #fff;
-    color: #183D51;
-    font-size: 16px;
-}
-
-.catalogSearch {
-    width: 510px;
-    padding: 0 18px;
-}
-
-.catalogSearch::placeholder {
-    color: #758d9a;
-}
-
-.catalogSort {
-    width: 240px;
-    padding: 0 14px;
-    cursor: pointer;
-}
-
 /* Адаптивность */
 @media (max-width: 1050px) {
     .catalogIntro {
@@ -70,10 +44,6 @@
         align-items: stretch;
     }
 
-    .catalogSearch,
-    .catalogSort {
-        width: 100%;
-    }
 }
 @media (max-width: 1050px) {
   .catalogIntro { max-width: 100%; }
